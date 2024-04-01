@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js --max-old-space-size=8192",
+    "start": "node index.js --pairing",
     "dev": "pm2 start index.js --name moon-bot --max-memory-restart 8G -- --max-old-space-size=8192"
   },
   "repository": {
