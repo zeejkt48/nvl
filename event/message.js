@@ -21,7 +21,6 @@ import {
 import {
   createRequire
 } from 'module'
-import yts from 'yt-search'
 import fetch from 'node-fetch'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -87,29 +86,6 @@ export default async function Message(conn, m, chatUpdate) {
           largeThumb: true,
           url: db.setting.link
         })
-      }
-      break
-
-      case 'speed': {
-        const {
-          promisify
-        } = (await import('util'))
-        const cp = (await import('child_process')).default
-        let execute = promisify(exec).bind(cp)
-        m.reply('Testing Speed...')
-        let o
-        try {
-          o = exec(`speedtest --accept-license`) // install speedtest-cli
-        } catch (e) {
-          o = e
-        } finally {
-          let {
-            stdout,
-            stderr
-          } = o
-          if (stdout) return m.reply(stdout)
-          if (stderr) return m.reply(stderr)
-        }
       }
       break
 
