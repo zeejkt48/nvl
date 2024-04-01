@@ -32,8 +32,7 @@
     "moment-timezone": "^0.5.43",
     "mongoose": "^7.3.4",
     "node-id3": "^0.2.6",
-    "node-webpmux": "^3.1.7",
-    "yt-search": "^2.10.4"
+    "node-webpmux": "^3.1.7"
   },
   "devDependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
